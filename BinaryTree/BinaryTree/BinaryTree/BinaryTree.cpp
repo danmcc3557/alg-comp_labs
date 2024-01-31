@@ -62,6 +62,7 @@ std::string BinaryTree::toString()
     }
     else
     {
-        return "Root value: " + std::to_string(root->theData);
+        std::string output = "Root value: " + std::to_string(root->theData) + "\nLeft value:" + std::to_string(root->leftPtr->theData) + "\nRight value:" + std::to_string(root->rightPtr->theData);
+        return output;
     }
 }
