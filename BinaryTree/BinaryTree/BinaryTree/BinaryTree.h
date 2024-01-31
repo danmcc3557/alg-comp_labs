@@ -5,6 +5,7 @@ class BinaryTree
 {
 	public:
 		BinaryTree();
+		void InsertNode(int);
 	private:
 		BinaryTreeNode* root;
 

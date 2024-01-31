@@ -3,9 +3,9 @@
 class BinaryTreeNode
 {
 	public:
-		BinaryTreeNode(int theData);
+		BinaryTreeNode(int);
 	private:
 		BinaryTreeNode* leftPtr;
-		int data;
+		int theData;
 		BinaryTreeNode* rightPTr;
 };

@@ -1,0 +1,7 @@
+﻿  BinaryTree.cpp
+C:\Users\x00173557\alg-comp_labs\BinaryTree\BinaryTree\BinaryTree\BinaryTree.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Node.cpp
+  Program.cpp
+C:\Users\x00173557\alg-comp_labs\BinaryTree\BinaryTree\BinaryTree\BinaryTree.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  BinaryTree.vcxproj -> C:\Users\x00173557\alg-comp_labs\BinaryTree\BinaryTree\x64\Debug\BinaryTree.exe
