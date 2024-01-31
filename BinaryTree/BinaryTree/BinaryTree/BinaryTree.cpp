@@ -16,7 +16,41 @@ void BinaryTree::InsertNode(int value)
     {
         root = toInsert;
     }
-
+    else
+    {
+        BinaryTreeNode* current = root;
+        while (true)
+        {
+            if (value < current->theData)
+            {
+                if (current->leftPtr == nullptr)
+                {
+                    current->leftPtr = toInsert;
+                    break;
+                }
+                else
+                {
+                    current = current->leftPtr;
+                }
+            }
+            else if (value > current->theData)
+            {
+                if (current->rightPtr == nullptr)
+                {
+                    current->rightPtr = toInsert;
+                    break;
+                }
+                else
+                {
+                    current = current->rightPtr;
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
 }
 
 
