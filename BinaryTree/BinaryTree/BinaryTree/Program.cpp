@@ -4,5 +4,8 @@
 
 int main()
 {
+	BinaryTree tree;
+	tree.InsertNode(2);
+	std::cout << tree.toString() << std::endl;
 	return 0;
 }
