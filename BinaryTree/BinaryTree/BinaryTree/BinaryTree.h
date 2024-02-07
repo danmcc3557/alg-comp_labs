@@ -1,16 +1,14 @@
 #pragma once
-#include "Node.h""
-#include <iostream>
+#include "Node.h"
 
-
-
-class BinaryTree
+class BinaryTree 
 {
-	public:
-		BinaryTree();
-		void InsertNode(int);
-		std::string toString();
-	private:
-		BinaryTreeNode* root;
+public:
+    BinaryTreeNode* root;
 
+    BinaryTree();
+
+    void InsertNode(BinaryTreeNode*& currentNode, int value);
+
+    void InOrderTraversal(BinaryTreeNode* currentNode);
 };

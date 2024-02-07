@@ -1,68 +1,38 @@
 #include "BinaryTree.h"
-#include "Node.h"
 #include <iostream>
-#include <string>
 
+using namespace std;
 
-BinaryTree::BinaryTree()
+BinaryTree::BinaryTree() 
 {
     root = nullptr;
 }
 
-void BinaryTree::InsertNode(int value)
+void BinaryTree::InsertNode(BinaryTreeNode*& currentNode, int value)
 {
-    BinaryTreeNode* toInsert = new BinaryTreeNode(value);
-    if (root == nullptr)
+    if (currentNode == nullptr)
     {
-        root = toInsert;
+        currentNode = new BinaryTreeNode(value);
     }
     else
     {
-        BinaryTreeNode* current = root;
-        while (true)
+        if (value < currentNode->data)
         {
-            if (value < current->theData)
-            {
-                if (current->leftPtr == nullptr)
-                {
-                    current->leftPtr = toInsert;
-                    break;
-                }
-                else
-                {
-                    current = current->leftPtr;
-                }
-            }
-            else if (value > current->theData)
-            {
-                if (current->rightPtr == nullptr)
-                {
-                    current->rightPtr = toInsert;
-                    break;
-                }
-                else
-                {
-                    current = current->rightPtr;
-                }
-            }
-            else
-            {
-                break;
-            }
+            InsertNode(currentNode->left, value);
+        }
+        else if (value > currentNode->data)
+        {
+            InsertNode(currentNode->right, value);
         }
     }
 }
 
-
-std::string BinaryTree::toString()
+void BinaryTree::InOrderTraversal(BinaryTreeNode* currentNode) 
 {
-    if (root == nullptr)
+    if (currentNode != nullptr) 
     {
-        return "Empty tree";
-    }
-    else
-    {
-        std::string output = "Root value: " + std::to_string(root->theData) + "\nLeft value:" + std::to_string(root->leftPtr->theData) + "\nRight value:" + std::to_string(root->rightPtr->theData);
-        return output;
+        InOrderTraversal(currentNode->left);
+        cout << currentNode->data << " ";
+        InOrderTraversal(currentNode->right);
     }
 }

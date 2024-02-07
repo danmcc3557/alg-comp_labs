@@ -2,8 +2,7 @@
 #include <iostream>
 
 
-BinaryTreeNode::BinaryTreeNode(int data)
+BinaryTreeNode::BinaryTreeNode(int value)
 {
-	theData = data;
+	data = value;
 }
-

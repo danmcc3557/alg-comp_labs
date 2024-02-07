@@ -1,15 +1,22 @@
-#include "Node.h"
-#include "BinaryTree.h"
 #include <iostream>
+#include "BinaryTree.h"
 
-int main()
-{
-	BinaryTree tree;
-	tree.InsertNode(2);
-	tree.InsertNode(4);
-	tree.InsertNode(4);
-	tree.InsertNode(1);
-	tree.InsertNode(9);
-	std::cout << tree.toString() << std::endl;
-	return 0;
+using namespace std;
+
+int main() {
+    BinaryTree tree;
+
+    tree.InsertNode(tree.root, 5);
+    tree.InsertNode(tree.root, 3);
+    tree.InsertNode(tree.root, 8);
+    tree.InsertNode(tree.root, 2);
+    tree.InsertNode(tree.root, 4);
+    tree.InsertNode(tree.root, 7);
+    tree.InsertNode(tree.root, 9);
+
+    cout << "In-Order Traversal: ";
+    tree.InOrderTraversal(tree.root);
+    cout << endl;
+
+    return 0;
 }

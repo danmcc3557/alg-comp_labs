@@ -1,10 +1,11 @@
 #pragma once
 
-class BinaryTreeNode
+class BinaryTreeNode 
 {
-	public:
-		BinaryTreeNode(int);
-		int theData;
-		BinaryTreeNode* leftPtr;
-		BinaryTreeNode* rightPtr;
+    public:
+        int data;
+        BinaryTreeNode* left;
+        BinaryTreeNode* right;
+
+        BinaryTreeNode(int value);
 };
