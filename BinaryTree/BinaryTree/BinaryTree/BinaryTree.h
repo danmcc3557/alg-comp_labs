@@ -8,7 +8,9 @@ public:
 
     BinaryTree();
 
-    void InsertNode(BinaryTreeNode*& currentNode, int value);
+    void InsertNode(BinaryTreeNode*& currentNode, int toInsert);
 
     void InOrderTraversal(BinaryTreeNode* currentNode);
+
+    void DeleteNode(BinaryTreeNode* currentNode, int toDelete);
 };
